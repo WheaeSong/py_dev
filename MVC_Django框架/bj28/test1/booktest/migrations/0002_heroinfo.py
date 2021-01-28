@@ -7,15 +7,18 @@ from django.db import models, migrations
 class Migration(migrations.Migration):
 
     dependencies = [
+        ('booktest', '0001_initial'),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='BookShop',
+            name='Heroinfo',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', primary_key=True, serialize=False, auto_created=True)),
-                ('btitle', models.CharField(max_length=20)),
-                ('bpub_date', models.DateField()),
+                ('hname', models.CharField(max_length=20)),
+                ('hgender', models.BooleanField(default=False)),
+                ('hcomment', models.CharField(max_length=128)),
+                ('hbook', models.ForeignKey(to='booktest.BookInfo')),
             ],
         ),
     ]
