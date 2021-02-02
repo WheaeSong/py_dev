@@ -8,7 +8,9 @@ class BookInfo(models.Model):
     btitle = models.CharField(max_length=20) # Charfiled说明是一个字符串，max_length指定最大长度
     # 出版日期，DateFiled说明是一个日期类型
     bpub_date = models.DateField()
-
+    def __str__(self):
+        # 返回书名
+        return self.btitle
 
 # 英雄人物类
 class Heroinfo(models.Model): 
@@ -25,4 +27,5 @@ class Heroinfo(models.Model):
     #  备注
     hcomment = models.CharField(max_length = 128)
     hbook = models.ForeignKey('BookInfo')
-    
+    def __str__(self): 
+        return self.hname # 

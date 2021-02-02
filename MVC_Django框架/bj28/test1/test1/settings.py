@@ -56,7 +56,7 @@ ROOT_URLCONF = 'test1.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR,'templates']  , # 
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -86,9 +86,9 @@ DATABASES = {
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'zh-hans'# 使用中文
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Shanghai'  # 使用上海的时间（北京时间）
 
 USE_I18N = True
 
